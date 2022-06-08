@@ -1,23 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import CardFlip from "./CardFlip.json";
 
 function App() {
+  console.log(CardFlip.CardFlip[0].imageSet);
+
+  const [cards, setCards] = useState(CardFlip.CardFlip[0].imageSet);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="heading-container">
+        <div className="logo-container">
+          <img className="flip-logo" src="/assets/logo/logo.png" alt="logo" />
+          <h1 className="flip-heading">Flip</h1>
+        </div>
+        <button className="btn-new-game">New Game</button>
+      </div>
+
+      <div className="flip-cards-container">
+        {cards.map((card) => {
+          return (
+            <div className="cards-container">
+              <div className="front-card-container">
+                <img
+                  src={card.img}
+                  alt="front card img"
+                  className="front-card-img"
+                />
+              </div>
+              <div className="back-card"></div>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

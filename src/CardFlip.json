@@ -1,0 +1,24 @@
+{
+  "CardFlip": [
+    {
+      "imageSet": [
+        { "img": "/assets/cardImages/cow.png" },
+        { "img": "/assets/cardImages/rabbit.png" },
+        { "img": "/assets/cardImages/dog.png" },
+        { "img": "/assets/cardImages/cat.png" },
+        { "img": "/assets/cardImages/camel.png" },
+        { "img": "/assets/cardImages/sheep.png" }
+      ]
+    },
+    {
+      "imageSet": [
+        { "img": "/assets/cardImages/pen.png" },
+        { "img": "/assets/cardImages/pencil.png" },
+        { "img": "/assets/cardImages/book.png" },
+        { "img": "/assets/cardImages/eraser.png" },
+        { "img": "/assets/cardImages/sharpner.png" },
+        { "img": "/assets/cardImages/notebook.png" }
+      ]
+    }
+  ]
+}
