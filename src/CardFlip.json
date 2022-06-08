@@ -12,12 +12,12 @@
     },
     {
       "imageSet": [
-        { "img": "/assets/cardImages/pen.png" },
-        { "img": "/assets/cardImages/pencil.png" },
-        { "img": "/assets/cardImages/book.png" },
+        { "img": "/assets/cardImages/pen.jpeg" },
+        { "img": "/assets/cardImages/pencil.jpeg" },
+        { "img": "/assets/cardImages/book.jpeg" },
         { "img": "/assets/cardImages/eraser.png" },
-        { "img": "/assets/cardImages/sharpner.png" },
-        { "img": "/assets/cardImages/notebook.png" }
+        { "img": "/assets/cardImages/sharpner.jpeg" },
+        { "img": "/assets/cardImages/notebook.jpeg" }
       ]
     }
   ]
