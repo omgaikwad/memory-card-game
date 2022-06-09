@@ -78,15 +78,21 @@ function App() {
         });
         resetTurns();
       } else {
-        setTimeout(() => resetTurns(), 1000);
+        setTimeout(() => resetTurns(), 500);
       }
     }
   }, [choiceOne, choiceTwo]);
 
   useEffect(() => {
+    if (score === 30) {
+      setTimeout(() => playStationaryCardHandler(), 2000);
+    }
+  }, [score]);
+
+  useEffect(() => {
     setTimeout(() => {
       setShowInitialCards(false);
-    }, 3000);
+    }, 4000);
   }, [cards]);
 
   useEffect(() => {
@@ -120,21 +126,23 @@ function App() {
         <p>Score: {score} </p>
       </div>
 
-      <div className="flip-cards-container">
-        {cards.map((card) => {
-          return (
-            <SingleCard
-              card={card}
-              cardClickHandler={cardClickHandler}
-              flipped={
-                card === choiceOne ||
-                card === choiceTwo ||
-                showInitialCards ||
-                card.isMatched
-              }
-            />
-          );
-        })}
+      <div className="flip-cards-cover-container">
+        <div className="flip-cards-container">
+          {cards.map((card) => {
+            return (
+              <SingleCard
+                card={card}
+                cardClickHandler={cardClickHandler}
+                flipped={
+                  card === choiceOne ||
+                  card === choiceTwo ||
+                  showInitialCards ||
+                  card.isMatched
+                }
+              />
+            );
+          })}
+        </div>
       </div>
     </div>
   );
